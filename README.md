@@ -40,10 +40,10 @@ detailsParser('path/to/details.pdf')
       msg: 'Extraction complete',
       deposits: [
         { 
-          num: '500920052',
-          amt: '$240.00',
-          acct: '658533013',
-          rout: '044000037' 
+          num: '003',
+          amt: '$1000.00',
+          acct: '01234',
+          rout: '56789' 
         }
       ]
     }
