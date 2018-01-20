@@ -1,6 +1,6 @@
 {
   "name": "chase-deposit-details-parser",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Takes the PDF downloadable from Chase's website's 'Deposit Details' page associated with a deposit and extracts the check details from it.",
   "main": "index.js",
   "scripts": {
