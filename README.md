@@ -41,8 +41,8 @@ detailsParser('path/to/details.pdf')
       deposits: [
         { 
           num: '003',
-          amt: '$1000.00',
-          acct: '01234',
+          amt: '$1,736.00',
+          acct: '10234',
           rout: '56789' 
         }
       ]
