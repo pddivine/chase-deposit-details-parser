@@ -1,0 +1,22 @@
+{
+  "name": "chase-deposit-details-parser",
+  "version": "0.0.1",
+  "description": "Takes the PDF downloadable from Chase's website's 'Deposit Details' page associated with a deposit and extracts the check details from it.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pddivine/chase-deposit-details-parser.git"
+  },
+  "author": "Patrick Divine",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/pddivine/chase-deposit-details-parser/issues"
+  },
+  "homepage": "https://github.com/pddivine/chase-deposit-details-parser#readme",
+  "dependencies": {
+    "pdf2json": "^1.1.7"
+  }
+}
