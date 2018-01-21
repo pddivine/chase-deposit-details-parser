@@ -8,7 +8,7 @@ function extractCheckData (pdfLocation, outputLocation) {
     return Promise.resolve({
       success: false,
       msg: 'No source file location provided.',
-      checks: []
+      deposits: []
     });
   }
 
@@ -63,7 +63,7 @@ function extractCheckData (pdfLocation, outputLocation) {
           return reject({
             success: false,
             msg: `Save error: ${e}`,
-            checks: []          
+            deposits: []          
           });
         }
       }
@@ -71,7 +71,7 @@ function extractCheckData (pdfLocation, outputLocation) {
       resolve({
         success: true,
         msg: 'Extraction complete.',
-        checks: checks
+        deposits: checks
       })
   
     });
