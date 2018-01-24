@@ -25,13 +25,16 @@ function extractCheckData (pdfLocation, outputLocation) {
       const texts = pdfData.formImage.Pages.reduce((acc, page) => {
         return acc.concat(page.Texts);
       }, []);
+
+      let posted = null;
     
       // Extract check data
       const modes = {
         'Check #': 'num',
         'Check amount': 'amt',
         'Account #': 'acct',
-        'Routing #': 'rout'
+        'Routing #': 'rout',
+        'Post date': 'posted'
       }
       let mode = null;
       texts.forEach(text => {
@@ -39,12 +42,18 @@ function extractCheckData (pdfLocation, outputLocation) {
     
         // Detect check
         if (text === 'Check') {
-          checks.push({});
+          checks.push({
+            posted
+          });
         }
     
         // Handle mode
         if (mode) {
-          checks[checks.length - 1][mode] = text;
+          if (mode === 'posted') {
+            posted = (new Date(text)).toISOString().slice(0, 10);
+          } else {
+            checks[checks.length - 1][mode] = text;
+          }
           return mode = null;
         }
     
@@ -81,4 +90,3 @@ function extractCheckData (pdfLocation, outputLocation) {
   });
 
 }
-
