@@ -50,7 +50,12 @@ function extractCheckData (pdfLocation, outputLocation) {
         // Handle mode
         if (mode) {
           if (mode === 'posted') {
-            posted = (new Date(text)).toISOString().slice(0, 10);
+            const datetime = new Date(text);
+            if (datetime.toString() === "Invalid Date") {
+              posted = text;
+            } else {
+              posted = (new Date(text)).toISOString().slice(0, 10);
+            }
           } else {
             checks[checks.length - 1][mode] = text;
           }
