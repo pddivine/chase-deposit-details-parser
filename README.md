@@ -27,7 +27,7 @@ For downloading deposit information, the Chase Business website only provides `P
 
 ```javascript
 
-const detailsParser = require('chase-deposit-details-parser`');
+const detailsParser = require('chase-deposit-details-parser');
 
 // Extract deposit details
 detailsParser('path/to/details.pdf')
